@@ -6,309 +6,315 @@
 -->
 <html>
 	<head>
-		<title>Nick's Portfolio</title>
+		<title>Nick Perdue — Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- Modern sans-serif font -->
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
 		<style>
-  /* --- Portfolio Hero Overrides --- */
-  :root {
-    --brand: #2563eb; /* change this to your accent color */
-  }
-  #header #logo h1 a { font-weight: 700; letter-spacing: .3px; }
-  #header #logo span { display:none; } /* hide 'by HTML5 UP' */
-  #banner-wrapper {
-    background: radial-gradient(900px 400px at 85% -10%, rgba(37,99,235,.12), transparent 60%);
-    padding: 3.5em 0 2.5em 0;
-  }
-  #banner.box {
-    border: none;
-    background: #fff;
-    background: rgba(255,255,255,0.03);
-    backdrop-filter: blur(6px);
-  }
-  body.homepage #banner h1, 
-  body.homepage #banner h2 {
-    font-size: 2.2em;
-    line-height: 1.2;
-    margin: 0 0 .3em 0;
-  }
-  #banner p.lede {
-    font-size: 1.1em;
-    color: #9aa4b2;
-    margin: 0 0 1.2em 0;
-  }
-  .hero-tags {
-    display:flex; gap:.5em; flex-wrap:wrap; margin:0 0 1.2em 0;
-  }
-  .hero-tag {
-    font-size: .8em;
-    padding:.35em .6em;
-    border-radius: 999px;
-    background: rgba(37,99,235,.15);
-    color: #cfe0ff;
-  }
-  .hero-actions .button {
-    margin-right:.6em;
-  }
-  .button.primary {
-    background: var(--brand) !important;
-    border-color: var(--brand) !important;
-    color:#fff !important;
-  }
-  .hero-avatar {
-    display:block; max-width: 260px; width:100%;
-    border-radius: 18px;
-    box-shadow: 0 12px 30px rgba(0,0,0,.25);
-    margin: 0 auto;
-  }
-  @media screen and (max-width: 980px){
-    body.homepage #banner h1, body.homepage #banner h2 { font-size:1.8em; }
-  }
-</style>
+		  /* --- Global font override --- */
+		  body, h1, h2, h3, h4, h5, h6, a, p, li, span {
+		    font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+		  }
+
+		  /* --- Portfolio Hero Overrides --- */
+		  :root {
+		    --brand: #2563eb; /* change this to your accent color */
+		  }
+
+		  #header #logo h1 a { font-weight: 700; letter-spacing: .3px; }
+		  #header #logo span { display:none; } /* hide 'by HTML5 UP' */
+
+		  /* Remove any template 'pink banner' look */
+		  #banner-wrapper {
+		    background: none !important;  /* no pink/colored backdrop */
+		    padding: 3.5em 0 2.5em 0;
+		  }
+		  #banner.box {
+		    border: none;
+		    background: transparent;      /* clean transparent panel */
+		    backdrop-filter: none;
+		  }
+
+		  body.homepage #banner h1, 
+		  body.homepage #banner h2 {
+		    font-size: 2.2em;
+		    line-height: 1.2;
+		    margin: 0 0 .3em 0;
+		  }
+		  #banner p.lede {
+		    font-size: 1.1em;
+		    color: #9aa4b2;
+		    margin: 0 0 1.2em 0;
+		  }
+		  .hero-tags {
+		    display:flex; gap:.5em; flex-wrap:wrap; margin:0 0 1.2em 0;
+		  }
+		  .hero-tag {
+		    font-size: .8em;
+		    padding:.35em .6em;
+		    border-radius: 999px;
+		    background: rgba(37,99,235,.15);
+		    color: #2b4d9e;
+		  }
+		  .hero-actions .button { margin-right:.6em; }
+		  .button.primary {
+		    background: var(--brand) !important;
+		    border-color: var(--brand) !important;
+		    color:#fff !important;
+		  }
+		  .hero-avatar {
+		    display:block; max-width: 260px; width:100%;
+		    border-radius: 18px;
+		    box-shadow: 0 12px 30px rgba(0,0,0,.25);
+		    margin: 0 auto;
+		  }
+		  @media screen and (max-width: 980px){
+		    body.homepage #banner h1, body.homepage #banner h2 { font-size:1.8em; }
+		  }
+		</style>
 	</head>
 	<body class="is-preload homepage">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<div id="header-wrapper">
-					<header id="header" class="container">
+			<div id="header-wrapper">
+				<header id="header" class="container">
 
-						<!-- Logo -->
-<div id="logo">
-  <h1><a href="index.html">Nick Yourlastname</a></h1>
-  <span>Portfolio</span>
-</div>
-
-						<!-- Nav -->
-							<nav id="nav">
-								<ul>
-  <li class="current"><a href="index.html">Home</a></li>
-  <li><a href="#projects">Projects</a></li>
-  <li><a href="#about">About</a></li>
-  <li><a href="assets/Nick-Yourlastname-Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
-  <li><a href="#contact">Contact</a></li>
-</ul>
-							</nav>
-
-					</header>
-				</div>
-
-			<!-- Banner (Hero) -->
-<div id="banner-wrapper">
-  <div id="banner" class="box container">
-    <div class="row">
-      <!-- Text side -->
-      <div class="col-7 col-12-medium">
-        <h1>Nick Yourlastname</h1>
-        <p class="lede">Geography • Remote Sensing • Data Visualization</p>
-
-        <div class="hero-tags">
-          <span class="hero-tag">Cartography</span>
-          <span class="hero-tag">GIS &amp; Spatial Analysis</span>
-          <span class="hero-tag">Remote Sensing</span>
-        </div>
-
-        <div class="hero-actions">
-          <a href="#projects" class="button large primary icon solid fa-arrow-circle-right">View Projects</a>
-          <a href="assets/Nick-Yourlastname-Resume.pdf" class="button alt large icon solid fa-file">Download CV</a>
-        </div>
-      </div>
-
-      <!-- Image side (optional). Replace with your headshot or a project mockup -->
-      <div class="col-5 col-12-medium" style="display:flex; align-items:center; justify-content:center;">
-        <img src="images/headshot.jpg" alt="Portrait of Nick Yourlastname" class="hero-avatar" />
-      </div>
-    </div>
-  </div>
-</div>
-
-			<!-- Features -->
-				<div id="features-wrapper">
-					<div class="container">
-						<div class="row">
-							<div class="col-4 col-12-medium">
-
-								<!-- Box -->
-									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-										<div class="inner">
-											<header>
-												<h2>AI Tools</h2>
-												<p>Collection of AI activities and tool development</p>
-											</header>
-											<p>See Examples Below
-											</div>
-									</section>
-
-							</div>
-							<div class="col-4 col-12-medium">
-
-								<!-- Box -->
-									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-										<div class="inner">
-											<header>
-												<h2>An interesting title</h2>
-												<p>This is also an interesting subtitle</p>
-											</header>
-											<p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
-										</div>
-									</section>
-
-							</div>
-							<div class="col-4 col-12-medium">
-
-								<!-- Box -->
-									<section class="box feature">
-										<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-										<div class="inner">
-											<header>
-												<h2>Oh, and finally ...</h2>
-												<p>Here's another intriguing subtitle</p>
-											</header>
-											<p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
-										</div>
-									</section>
-
-							</div>
-						</div>
+					<!-- Logo -->
+					<div id="logo">
+					  <h1><a href="index.html">Nick Perdue</a></h1>
+					  <span>Portfolio</span>
 					</div>
-				</div>
 
-			<!-- Main -->
-				<div id="main-wrapper">
-					<div class="container">
-						<div class="row gtr-200">
-							<div class="col-4 col-12-medium">
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+						  <li class="current"><a href="index.html">Home</a></li>
+						  <li><a href="#projects">Projects</a></li>
+						  <li><a href="#about">About</a></li>
+						  <li><a href="assets/Nick-Perdue-Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+						  <li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav>
 
-								<!-- Sidebar -->
-									<div id="sidebar">
-										<section class="widget thumbnails">
-											<h3>Interesting stuff</h3>
-											<div class="grid">
-												<div class="row gtr-50">
-													<div class="col-6"><a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a></div>
-													<div class="col-6"><a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a></div>
-													<div class="col-6"><a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a></div>
-													<div class="col-6"><a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a></div>
-												</div>
-											</div>
-											<a href="#" class="button icon fa-file-alt">More</a>
-										</section>
-									</div>
-
-							</div>
-							<div class="col-8 col-12-medium imp-medium">
-
-								<!-- Content -->
-									<div id="content">
-										<section class="last">
-											<h2>So what's this all about?</h2>
-											<p>This is <strong>Verti</strong>, a free and fully responsive HTML5 site template by <a href="http://html5up.net">HTML5 UP</a>.
-											Verti is released under the <a href="http://html5up.net/license">Creative Commons Attribution license</a>, so feel free to use it for any personal or commercial project you might have going on (just don't forget to credit us for the design!)</p>
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper bibendum ipsum, et tristique augue fringilla eu. Vivamus id risus vel dolor auctor euismod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus mattis lectus sit amet phasellus quam turpis.</p>
-											<a href="#" class="button icon solid fa-arrow-circle-right">Continue Reading</a>
-										</section>
-									</div>
-
-							</div>
-						</div>
-					</div>
-				</div>
-
-			<!-- Footer -->
-				<div id="footer-wrapper">
-					<footer id="footer" class="container">
-						<div class="row">
-							<div class="col-3 col-6-medium col-12-small">
-
-								<!-- Links -->
-									<section class="widget links">
-										<h3>Random Stuff</h3>
-										<ul class="style2">
-											<li><a href="#">Etiam feugiat condimentum</a></li>
-											<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
-											<li><a href="#">Sed porttitor cras in erat nec</a></li>
-											<li><a href="#">Felis varius pellentesque potenti</a></li>
-											<li><a href="#">Nullam scelerisque blandit leo</a></li>
-										</ul>
-									</section>
-
-							</div>
-							<div class="col-3 col-6-medium col-12-small">
-
-								<!-- Links -->
-									<section class="widget links">
-										<h3>Random Stuff</h3>
-										<ul class="style2">
-											<li><a href="#">Etiam feugiat condimentum</a></li>
-											<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
-											<li><a href="#">Sed porttitor cras in erat nec</a></li>
-											<li><a href="#">Felis varius pellentesque potenti</a></li>
-											<li><a href="#">Nullam scelerisque blandit leo</a></li>
-										</ul>
-									</section>
-
-							</div>
-							<div class="col-3 col-6-medium col-12-small">
-
-								<!-- Links -->
-									<section class="widget links">
-										<h3>Random Stuff</h3>
-										<ul class="style2">
-											<li><a href="#">Etiam feugiat condimentum</a></li>
-											<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
-											<li><a href="#">Sed porttitor cras in erat nec</a></li>
-											<li><a href="#">Felis varius pellentesque potenti</a></li>
-											<li><a href="#">Nullam scelerisque blandit leo</a></li>
-										</ul>
-									</section>
-
-							</div>
-							<div class="col-3 col-6-medium col-12-small">
-
-								<!-- Contact -->
-									<section class="widget contact last">
-										<h3>Contact Us</h3>
-										<ul>
-											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-											<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-										</ul>
-										<p>1234 Fictional Road<br />
-										Nashville, TN 00000<br />
-										(800) 555-0000</p>
-									</section>
-
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-12">
-								<div id="copyright">
-									<ul class="menu">
-										<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</footer>
-				</div>
-
+				</header>
 			</div>
 
-		<!-- Scripts -->
+			<!-- Banner (Hero) -->
+			<div id="banner-wrapper">
+			  <div id="banner" class="box container">
+			    <div class="row">
+			      <!-- Text side -->
+			      <div class="col-7 col-12-medium">
+			        <h1>Nick Perdue</h1>
+			        <p class="lede">Geography • Remote Sensing • Data Visualization</p>
 
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			        <div class="hero-tags">
+			          <span class="hero-tag">Cartography</span>
+			          <span class="hero-tag">GIS &amp; Spatial Analysis</span>
+			          <span class="hero-tag">Remote Sensing</span>
+			        </div>
+
+			        <div class="hero-actions">
+			          <a href="#projects" class="button large primary icon solid fa-arrow-circle-right">View Projects</a>
+			          <a href="assets/Nick-Perdue-Resume.pdf" class="button alt large icon solid fa-file">Download CV</a>
+			        </div>
+			      </div>
+
+			      <!-- Image side (optional). Replace with your headshot or a project mockup -->
+			      <div class="col-5 col-12-medium" style="display:flex; align-items:center; justify-content:center;">
+			        <img src="images/headshot.jpg" alt="Portrait of Nick Perdue" class="hero-avatar" />
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+			<!-- Features -->
+			<div id="features-wrapper" id="projects">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 col-12-medium">
+
+							<!-- Box -->
+							<section class="box feature">
+								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+								<div class="inner">
+									<header>
+										<h2>AI Tools</h2>
+										<p>Collection of AI activities and tool development</p>
+									</header>
+									<p>See Examples Below</p>
+								</div>
+							</section>
+
+						</div>
+						<div class="col-4 col-12-medium">
+
+							<!-- Box -->
+							<section class="box feature">
+								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+								<div class="inner">
+									<header>
+										<h2>An interesting title</h2>
+										<p>This is also an interesting subtitle</p>
+									</header>
+									<p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+								</div>
+							</section>
+
+						</div>
+						<div class="col-4 col-12-medium">
+
+							<!-- Box -->
+							<section class="box feature">
+								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+								<div class="inner">
+									<header>
+										<h2>Oh, and finally ...</h2>
+										<p>Here's another intriguing subtitle</p>
+									</header>
+									<p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+								</div>
+							</section>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Main -->
+			<div id="main-wrapper">
+				<div class="container">
+					<div class="row gtr-200">
+						<div class="col-4 col-12-medium">
+
+							<!-- Sidebar -->
+							<div id="sidebar">
+								<section class="widget thumbnails">
+									<h3>Interesting stuff</h3>
+									<div class="grid">
+										<div class="row gtr-50">
+											<div class="col-6"><a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a></div>
+											<div class="col-6"><a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a></div>
+											<div class="col-6"><a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a></div>
+											<div class="col-6"><a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a></div>
+										</div>
+									</div>
+									<a href="#" class="button icon fa-file-alt">More</a>
+								</section>
+							</div>
+
+						</div>
+						<div class="col-8 col-12-medium imp-medium">
+
+							<!-- Content -->
+							<div id="content">
+								<section class="last" id="about">
+									<h2>So what's this all about?</h2>
+									<p>This is <strong>Verti</strong>, a free and fully responsive HTML5 site template by <a href="http://html5up.net">HTML5 UP</a>.
+									Verti is released under the <a href="http://html5up.net/license">Creative Commons Attribution license</a>, so feel free to use it for any personal or commercial project you might have going on (just don't forget to credit us for the design!)</p>
+									<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper bibendum ipsum, et tristique augue fringilla eu. Vivamus id risus vel dolor auctor euismod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus mattis lectus sit amet phasellus quam turpis.</p>
+									<a href="#" class="button icon solid fa-arrow-circle-right">Continue Reading</a>
+								</section>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer -->
+			<div id="footer-wrapper" id="contact">
+				<footer id="footer" class="container">
+					<div class="row">
+						<div class="col-3 col-6-medium col-12-small">
+
+							<!-- Links -->
+							<section class="widget links">
+								<h3>Random Stuff</h3>
+								<ul class="style2">
+									<li><a href="#">Etiam feugiat condimentum</a></li>
+									<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+									<li><a href="#">Sed porttitor cras in erat nec</a></li>
+									<li><a href="#">Felis varius pellentesque potenti</a></li>
+									<li><a href="#">Nullam scelerisque blandit leo</a></li>
+								</ul>
+							</section>
+
+						</div>
+						<div class="col-3 col-6-medium col-12-small">
+
+							<!-- Links -->
+							<section class="widget links">
+								<h3>Random Stuff</h3>
+								<ul class="style2">
+									<li><a href="#">Etiam feugiat condimentum</a></li>
+									<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+									<li><a href="#">Sed porttitor cras in erat nec</a></li>
+									<li><a href="#">Felis varius pellentesque potenti</a></li>
+									<li><a href="#">Nullam scelerisque blandit leo</a></li>
+								</ul>
+							</section>
+
+						</div>
+						<div class="col-3 col-6-medium col-12-small">
+
+							<!-- Links -->
+							<section class="widget links">
+								<h3>Random Stuff</h3>
+								<ul class="style2">
+									<li><a href="#">Etiam feugiat condimentum</a></li>
+									<li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+									<li><a href="#">Sed porttitor cras in erat nec</a></li>
+									<li><a href="#">Felis varius pellentesque potenti</a></li>
+									<li><a href="#">Nullam scelerisque blandit leo</a></li>
+								</ul>
+							</section>
+
+						</div>
+						<div class="col-3 col-6-medium col-12-small">
+
+							<!-- Contact -->
+							<section class="widget contact last">
+								<h3>Contact Us</h3>
+								<ul>
+									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
+								</ul>
+								<p>1234 Fictional Road<br />
+								Nashville, TN 00000<br />
+								(800) 555-0000</p>
+							</section>
+
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div id="copyright">
+								<ul class="menu">
+									<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
-
 </html>
-
