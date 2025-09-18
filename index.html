@@ -12,7 +12,48 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!-- Modern sans-serif font -->
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Step 3 — Prompting Activities (minimal overrides) */
+  .prompt-activities .toggles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: .75rem;
+    margin: 1rem 0 1.25rem;
+  }
+  .prompt-activities .toggle-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 100%; padding: .75rem 1rem; border-radius: 10px;
+    border: 1px solid #d2d6dc; background: #fff; color: #0f172a;
+    font-weight: 600; cursor: pointer;
+    transition: transform .06s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .prompt-activities .toggle-btn:focus { outline: 2px solid #2563eb; outline-offset: 2px; }
+  .prompt-activities .toggle-btn[aria-expanded="true"] {
+    border-color: #2563eb; box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  }
+  .prompt-activities .panel {
+    border: 1px solid #e5e7eb; border-radius: 12px; background: #fff;
+    padding: 1rem; margin-bottom: 1rem;
+  }
+  .prompt-activities .panel[hidden] { display: none; }
 
+  .prompt-activities .panel h3 { margin: 0 0 .6rem; }
+  .prompt-activities .meta { color: #6b7280; font-size: .9em; margin: .25rem 0 .75rem; }
+
+  .prompt-activities .prompt-box {
+    border: 1px solid #eef2f7; border-radius: 10px; background: #fafbff;
+    padding: .9rem;
+  }
+  .prompt-activities .prompt-box pre,
+  .prompt-activities .prompt-box textarea {
+    width: 100%; background: #fff; border: 1px solid #e5e7eb; border-radius: 8px;
+    padding: .65rem; overflow: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: .92em; min-height: 110px;
+  }
+  .prompt-activities .prompt-box textarea { resize: vertical; }
+</style>
+		
 		<style>
 		  /* --- Global font override --- */
 		  body, h1, h2, h3, h4, h5, h6, a, p, li, span {
@@ -138,6 +179,117 @@
 					<div class="row">
 						<div class="col-4 col-12-medium">
 
+<section class="box prompt-activities" id="prompting-activities">
+  <header>
+    <h2>Step 3: Prompting Activities</h2>
+    <p class="meta">Click a button to reveal the student’s prompt.</p>
+  </header>
+
+  <!-- Buttons -->
+  <div class="toggles">
+    <button class="toggle-btn" aria-expanded="false" aria-controls="p-zero">Zero-shot</button>
+    <button class="toggle-btn" aria-expanded="false" aria-controls="p-few">Few-shot</button>
+    <button class="toggle-btn" aria-expanded="false" aria-controls="p-instr-j">Instructional — Journalistic</button>
+    <button class="toggle-btn" aria-expanded="false" aria-controls="p-instr-r">Instructional — Industry Report</button>
+    <button class="toggle-btn" aria-expanded="false" aria-controls="p-context-n">Contextual — Novice</button>
+    <button class="toggle-btn" aria-expanded="false" aria-controls="p-context-e">Contextual — Expert</button>
+    <button class="toggle-btn" aria-expanded="false" aria-controls="p-role-c">Role-playing — Citizen</button>
+    <button class="toggle-btn" aria-expanded="false" aria-controls="p-role-s">Role-playing — Economic Stakeholder</button>
+    <button class="toggle-btn" aria-expanded="false" aria-controls="p-ideal">Ideal Structure</button>
+  </div>
+
+  <!-- Panels (PROMPT ONLY) -->
+  <div id="p-zero" class="panel" hidden>
+    <h3>Zero-shot Prompt</h3>
+    <p class="meta">Create a zero-shot prompt based on a Wikipedia page or news article. Output (when used) should be a bullet list.</p>
+    <div class="prompt-box">
+      <h4>Student Prompt</h4>
+      <pre contenteditable="true">Summarize the key geographic, political, and environmental aspects of [topic] in 6–8 bullet points. Include dates, places, impacts, and recovery efforts.</pre>
+    </div>
+  </div>
+
+  <div id="p-few" class="panel" hidden>
+    <h3>Few-shot Prompt</h3>
+    <p class="meta">Use short examples to steer structure/style. Output target: 50–75 words.</p>
+    <div class="prompt-box">
+      <h4>Student Prompt</h4>
+      <pre contenteditable="true">Example 1: [paste short example]
+Example 2: [paste short example]
+Task: In 50–75 words, explain the significance of [topic] with attention to place, people, and policy.</pre>
+    </div>
+  </div>
+
+  <div id="p-instr-j" class="panel" hidden>
+    <h3>Instructional — Journalistic</h3>
+    <p class="meta">Output target: 500–750 words.</p>
+    <div class="prompt-box">
+      <h4>Student Prompt</h4>
+      <pre contenteditable="true">Write a 500–750 word article on [topic]. Use clear, engaging language, include key places/times, and cite credible sources for follow-up reading.</pre>
+    </div>
+  </div>
+
+  <div id="p-instr-r" class="panel" hidden>
+    <h3>Instructional — Industry Report</h3>
+    <p class="meta">Output target: 500–750 words.</p>
+    <div class="prompt-box">
+      <h4>Student Prompt</h4>
+      <pre contenteditable="true">Draft a 500–750 word industry brief on [topic]. Include an executive summary, key metrics, stakeholders, and a short risk section.</pre>
+    </div>
+  </div>
+
+  <div id="p-context-n" class="panel" hidden>
+    <h3>Contextual — Novice Audience</h3>
+    <p class="meta">Output target: 250–350 words.</p>
+    <div class="prompt-box">
+      <h4>Student Prompt</h4>
+      <pre contenteditable="true">Explain [topic] for readers new to the subject. Use everyday metaphors, a simple map description, and gently paced structure (250–350 words).</pre>
+    </div>
+  </div>
+
+  <div id="p-context-e" class="panel" hidden>
+    <h3>Contextual — Expert Audience</h3>
+    <p class="meta">Output target: 250–350 words.</p>
+    <div class="prompt-box">
+      <h4>Student Prompt</h4>
+      <pre contenteditable="true">Summarize current research on [topic], citing datasets, uncertainties, and recent papers (250–350 words).</pre>
+    </div>
+  </div>
+
+  <div id="p-role-c" class="panel" hidden>
+    <h3>Role-playing — Citizen</h3>
+    <p class="meta">Output target: 350–500 words.</p>
+    <div class="prompt-box">
+      <h4>Student Prompt</h4>
+      <pre contenteditable="true">Write 350–500 words from the perspective of a local resident responding to [event]. Include place-based details, concerns, and community values.</pre>
+    </div>
+  </div>
+
+  <div id="p-role-s" class="panel" hidden>
+    <h3>Role-playing — Economic Stakeholder</h3>
+    <p class="meta">Output target: 350–500 words.</p>
+    <div class="prompt-box">
+      <h4>Student Prompt</h4>
+      <pre contenteditable="true">Write 350–500 words as an industry stakeholder discussing [event] impacts, citing economic indicators and land-use policy considerations.</pre>
+    </div>
+  </div>
+
+  <div id="p-ideal" class="panel" hidden>
+    <h3>Ideal Structure Prompt</h3>
+    <p class="meta">Output target: 750–1000 words.</p>
+    <div class="prompt-box">
+      <h4>Student Prompt</h4>
+      <pre contenteditable="true">Using [topic] as a case, produce a 750–1000 word developed report with:
+• Title & 2-sentence abstract
+• Geographic, political, environmental context
+• Timeline of key events
+• Stakeholder analysis
+• Risks, uncertainties, and sources
+• 3 next-step questions for deeper inquiry</pre>
+    </div>
+  </div>
+</section>
+
+							
 							<!-- Box -->
 							<section class="box feature">
 								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
@@ -318,3 +470,4 @@
 
 	</body>
 </html>
+
