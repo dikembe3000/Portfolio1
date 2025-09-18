@@ -467,7 +467,22 @@ Task: In 50–75 words, explain the significance of [topic] with attention to pl
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-
+<script>
+  (function(){
+    const buttons = document.querySelectorAll('#prompting-activities .toggle-btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('aria-controls');
+        const panel = document.getElementById(id);
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!isOpen));
+        if (panel) panel.hidden = isOpen;
+        if (!isOpen && panel) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  })();
+</script>
 	</body>
 </html>
+
 
